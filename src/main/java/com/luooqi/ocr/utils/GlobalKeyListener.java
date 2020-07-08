@@ -18,7 +18,7 @@ public class GlobalKeyListener implements NativeKeyListener {
 
     @Override
     public void nativeKeyPressed(NativeKeyEvent e) {
-        if (e.getKeyCode() == NativeKeyEvent.VC_F4){
+        if (e.getKeyCode() == NativeKeyEvent.VC_O && (e.getModifiers() & NativeKeyEvent.ALT_MASK) != 0){
             preventEvent(e);
             MainFm.doSnap();
         }
